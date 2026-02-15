@@ -1,0 +1,96 @@
+# =====================================
+# STARSHIP — CONFIG COMPLETA (COM ÍCONES)
+# Requer Nerd Font
+# =====================================
+
+add_newline = true
+command_timeout = 10
+scan_timeout = 10
+
+format = """
+$username$hostname$directory$git_branch$git_status
+$character
+"""
+
+# ---------- Prompt ----------
+[character]
+success_symbol = "[❯❯](green)"
+error_symbol = "[❯❯](red)"
+vimcmd_symbol = "[❮❮](yellow)"
+
+# ---------- Usuário / Host ----------
+[username]
+show_always = true
+style_user = "green"
+style_root = "red"
+
+[hostname]
+ssh_only = false
+style = "cyan"
+
+# ---------- Diretório ----------
+[directory]
+style = "blue"
+truncation_length = 3
+truncate_to_repo = true
+read_only = " "
+
+# ---------- Git ----------
+[git_branch]
+symbol = " "
+style = "purple"
+
+[git_status]
+style = "yellow"
+format = "([$all_status$ahead_behind]($style))"
+
+# ---------- Linguagens ----------
+[nodejs]
+symbol = " "
+style = "green"
+
+[python]
+symbol = " "
+style = "yellow"
+
+[rust]
+symbol = " "
+style = "red"
+
+[golang]
+symbol = " "
+style = "cyan"
+
+# ---------- Tempo ----------
+[time]
+disabled = false
+format = " [ $time]"
+time_format = "%H:%M"
+style = "white"
+
+# ---------- Execução ----------
+[cmd_duration]
+min_time = 500
+format = " took [󱎫 $duration]($style)"
+style = "dimmed white"
+
+# ---------- Jobs ----------
+[jobs]
+symbol = "󰜎 "
+style = "blue"
+
+# ---------- Status de erro ----------
+[status]
+disabled = false
+format = "[󰅙 $status]($style) "
+style = "red"
+
+# ---------- Performance ----------
+[battery]
+disabled = true
+
+[memory_usage]
+disabled = true
+
+[package]
+disabled = true

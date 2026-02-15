@@ -1,0 +1,17 @@
+# Desativa mensagem de boas-vindas
+function fish_greeting
+    # não faz nada
+end
+if status --is-login
+    fastfetch
+end
+function fish_prompt
+    # Primeira linha (status/frase)
+    set_color yellow
+    echo "🚀 Sempre codando!"
+    
+    # Segunda linha (prompt normal)
+    set_color green
+    echo -n "❯❯ "
+    set_color normal
+end

@@ -1,0 +1,89 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", monospace;
+    font-size: 12px;
+    border: none;
+    min-height: 0;
+}
+
+/* Waybar container */
+window#waybar {
+    background: transparent;
+}
+
+/* Todos os blocos */
+#workspaces,
+#clock,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#battery {
+    background: rgba(20, 20, 28, 0.65);
+    padding: 4px 10px;
+    margin: 0 4px;
+    border-radius: 999px;
+    color: #eaeaea;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 4px 8px;
+    margin: 0 2px;
+    border-radius: 999px;
+    background: transparent;
+    color: #aaa;
+}
+
+#workspaces button.active {
+    background: rgba(120, 120, 255, 0.35);
+    color: #fff;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Estados */
+#battery.warning {
+    color: #f9c74f;
+}
+
+#battery.critical {
+    color: #f94144;
+}
+
+#pulseaudio.muted {
+    color: #888;
+}
+
+#custom-gpu{
+    
+    background: rgba(20, 20, 28, 0.65);
+    padding: 4px 10px;
+    margin: 0 4px;
+    font-size: 12px;
+    border-radius: 999px;
+    color: #eaeaea;
+}
+#clock {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-weight: bold;
+    background-color: #1e1e2e; /* Fundo escuro (base Catppuccin) */
+    color: #cdd6f4;            /* Texto claro */
+    padding: 0 10px;
+    margin: 0 5px;
+    border-radius: 10px;       /* Bordas arredondadas */
+    border: 2px solid #b4befe; /* Borda sutil */
+}
+
+/* Estilização específica do Tooltip (Calendário) */
+tooltip {
+    background: #1e1e2e;
+    border-radius: 10px;
+    border: 2px solid #b4befe;
+}
+
+tooltip label {
+    color: #cdd6f4;
+}

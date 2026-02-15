@@ -1,0 +1,19 @@
+/* Estilo específico para o gsimplecal */
+#gsimplecal {
+    background-color: #1e1e2e; /* Cor de fundo */
+    color: #cdd6f4;            /* Cor do texto */
+    border: 2px solid #b4befe;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#gsimplecal calendar {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    border: none;
+}
+
+#gsimplecal calendar:selected {
+    background-color: #f5c2e7; /* Cor do dia selecionado */
+    color: #11111b;
+}

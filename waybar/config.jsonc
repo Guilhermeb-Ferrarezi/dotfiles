@@ -1,0 +1,114 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "margin-top": 8,
+    "margin-left": 12,
+    "margin-right": 12,
+    "spacing": 8,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "cpu",
+        "custom/gpu",
+        "memory",
+        "network",
+        "pulseaudio",
+        "pulseaudio#mic",
+        "battery"
+    ],
+    // =========================
+    // WORKSPACES
+    // =========================
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true
+    },
+    // =========================
+    // CLOCK (DATA + HORA)
+    // =========================
+    "clock": {
+        "interval": 60,
+        "format": "{:%H:%M}  ",
+        "format-alt": "{:%A, %d de %B de %Y}  ",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+    // =========================
+    // CPU
+    // =========================
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true
+    },
+    "custom/gpu": {
+        "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+        "interval": 2,
+        "format": "󰢮 {}%",
+        "tooltip": "GPU usage"
+    },
+    // =========================
+    // MEMÓRIA RAM (SEM ÍCONE PROBLEMÁTICO)
+    // =========================
+    "memory": {
+        "format": "🧠 {used:0.1f}GB"
+    },
+    // =========================
+    // REDE
+    // =========================
+    "network": {
+        "format-wifi": " Net{signalStrength}%",
+        "format-ethernet": "󰈀 Net",
+        "format-disconnected": ""
+    },
+    // =========================
+    // ÁUDIO - SAÍDA (FONE / SOM)
+    // =========================
+    "pulseaudio": {
+        "format": "🔊 {volume}%",
+        "format-muted": "🔇",
+        "on-click": "pavucontrol"
+    },
+    // =========================
+    // ÁUDIO - MICROFONE
+    // =========================
+    "pulseaudio#mic": {
+        "format": "🎤 {volume}%",
+        "format-muted": "🎤 mutado",
+        "source": true,
+        "source-port": "input",
+        "on-click": "pavucontrol"
+    },
+    // =========================
+    // BATERIA
+    // =========================
+    "battery": {
+        "format": " {capacity}%",
+        "format-charging": " {capacity}%",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        }
+    }
+}
