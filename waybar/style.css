@@ -66,6 +66,21 @@ window#waybar {
     border-radius: 999px;
     color: #eaeaea;
 }
+
+#custom-quickshell {
+    background: rgba(137, 180, 250, 0.18);
+    color: #cdd6f4;
+    border: 1px solid rgba(137, 180, 250, 0.45);
+    padding: 4px 12px;
+    margin: 0 4px;
+    border-radius: 999px;
+    font-weight: bold;
+}
+
+#custom-quickshell:hover {
+    background: rgba(137, 180, 250, 0.30);
+}
+
 #clock {
     font-family: "JetBrainsMono Nerd Font", sans-serif;
     font-weight: bold;

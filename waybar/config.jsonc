@@ -13,6 +13,7 @@
         "clock"
     ],
     "modules-right": [
+        "custom/quickshell",
         "cpu",
         "custom/gpu",
         "memory",
@@ -21,6 +22,12 @@
         "pulseaudio#mic",
         "battery"
     ],
+    "custom/quickshell": {
+        "format": "󱂬 QS",
+        "tooltip": true,
+        "tooltip-format": "Abrir/fechar Quickshell",
+        "on-click": "~/.local/bin/toggle-quickshell"
+    },
     // =========================
     // WORKSPACES
     // =========================

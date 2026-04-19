@@ -1,0 +1,25 @@
+{
+  "dankKDEConnect": {
+    "enabled": false
+  },
+  "dankGifSearch": {
+    "enabled": false
+  },
+  "homeAssistantMonitor": {
+    "enabled": true
+  },
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
+  },
+  "dankActions": {
+    "enabled": true
+  },
+  "claudeCodeUsage": {
+    "enabled": false
+  },
+  "codexBar": {
+    "enabled": true,
+    "codexbarPath": "/home/user/.local/bin/codebar"
+  }
+}
